@@ -26,8 +26,10 @@ rangeReturned <- read_excel(spreadSheetRangeFile,
            sheet = "Simple",
            range = "d12:e15")
 
+# simpler range specification and turn off column names as labels
 read_excel("Sample Files/ranges.xlsx",
-           range = "Simple!d12:e15")
+           range = "Simple!d12:e15",
+           col_names = FALSE)
 
 # openxlsx ------------------------------------------
 
