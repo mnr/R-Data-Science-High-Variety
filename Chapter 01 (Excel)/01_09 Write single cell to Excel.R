@@ -10,7 +10,7 @@
 # writexl and rio only allow for writing entire sheets
 
 # be sure to set working directory
-# setwd("Exercise Files")
+# setwd("Exercise Files/Chapter 01")
 
 # openxlsx ------------------------------------------
 

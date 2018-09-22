@@ -10,7 +10,7 @@
 spreadSheetRangeFile <- "Sample Files/simple_spreadsheet.xlsx"
 
 # be sure to set working directory
-# setwd("Exercise Files")
+# setwd("Exercise Files/Chapter 01")
 
 # rio ---------------------------------------
 # rio doesn't support ranges, although you can pass arguments through ...

@@ -8,7 +8,7 @@
 # how to write a range to an Excel spreadsheet
 
 # be sure to set working directory
-# setwd("Exercise Files")
+# setwd("Exercise Files/Chapter 01")
 
 # Some data to write to an excel range
 SmallTableForRange <- data.frame(thisThing = 1:5, 

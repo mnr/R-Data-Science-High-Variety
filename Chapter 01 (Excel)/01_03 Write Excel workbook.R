@@ -8,7 +8,7 @@
 # how to create an entire Excel workbook, including multiple sheets
 
 # be sure to set working directory
-# setwd("Exercise Files")
+# setwd("Exercise Files/Chapter 01")
 
 # two data.frames to be written to excel file
 data("CO2", "ChickWeight")
