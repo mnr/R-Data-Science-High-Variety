@@ -1,0 +1,32 @@
+# Copyright Mark Niemann-Ross, 2018
+# Author: Mark Niemann-Ross. mark.niemannross@gmail.com
+# LinkedIn: https://www.linkedin.com/in/markniemannross/
+# Github: https://github.com/mnr
+# More Learning: http://niemannross.com/link/mnratlil
+# Description: R Programming in Data Science: High Variety Data 
+
+# how to write rows and columns to an Excel spreadsheet
+
+# writexl and rio only allow for writing entire sheets
+
+# be sure to set working directory
+# setwd("Exercise Files")
+
+# Some data to write to an excel range
+SmallTableForRange <- data.frame(thisThing = 1:5, 
+                                 thatThing = 7:11,
+                                 AnotThing = LETTERS[1:5])
+
+
+# openxlsx ------------------------------------------
+
+# install.packages("openxlsx")
+# library(openxlsx)
+
+workingXLSX <- loadWorkbook( file = "Sample Files/multipleRanges.xlsx")
+
+writeData(workingXLSX, x = SmallTableForRange,
+          sheet = "Simple",
+          startCol = 8, startRow = 3)
+saveWorkbook(workingXLSX, "writeToRange.xlsx")
+
