@@ -21,7 +21,8 @@ spreadSheetRangeFile <- "Sample Files/ranges.xlsx"
 # install.packages("readxl")
 # library(readxl)
 
-read_excel(spreadSheetRangeFile, 
+# two things: 1) Returns a tibble, and 2) first row is labels
+rangeReturned <- read_excel(spreadSheetRangeFile, 
            sheet = "Simple",
            range = "d12:e15")
 
@@ -34,6 +35,7 @@ read_excel("Sample Files/ranges.xlsx",
 # library(openxlsx)
 
 # openxlsx supports named ranges
+# returns data frame. First row in spreadsheet is labels
 
-read.xlsx(spreadSheetRangeFile, namedRegion = "initial_project_cost")
+rangeReturned <- read.xlsx(spreadSheetRangeFile, namedRegion = "initial_project_cost")
 
