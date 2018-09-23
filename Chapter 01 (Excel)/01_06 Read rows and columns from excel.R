@@ -36,6 +36,8 @@ read_excel(spreadSheetRangeFile, range = "3:3")
 
 # For rows, do this
 read_excel(spreadSheetRangeFile, skip = 3, n_max = 1)
+# by the way - skip is normally used to omit narrative text
+# placed at the top of an excel spreadsheet
 
 
 # openxlsx ------------------------------------------
