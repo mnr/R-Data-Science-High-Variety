@@ -7,7 +7,7 @@
 
 # importing standard text files
 
-sampleTXT <- "A_Midsummer_Nights_Dream.txt"
+sampleTXT <- "sample files/A_Midsummer_Nights_Dream.txt"
 
 # install.packages("readr") # from the tidyverse
 library(readr)
