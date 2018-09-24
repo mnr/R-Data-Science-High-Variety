@@ -10,6 +10,7 @@
 install.packages("foreign")
 library(foreign)
 
+# read from DBF ----
 sampleDBF <- "sample files/eva.dbf"
 
 foreignDBF <- read.dbf(sampleDBF)
@@ -29,3 +30,7 @@ memosDBT <- read_file_raw(sampleDBT) # read in the raw data
 memo2matrix <- matrix(memosDBT, nrow = 512) # chunk the data into 512 byte blocks
 matrixToAlpha <- apply(memo2matrix,2,intToUtf8) # convert each bin chunk to text
 foreignDBF$comments <- matrixToAlpha[as.integer(foreignDBF$PURPOSE_) + 1] # glue it back into the original dbf file
+foreignDBF$PURPOSE_ <- NULL # remove intermediate data column
+
+# write to DBF ------------
+write.dbf(foreignDBF, "writeToDBF")
