@@ -17,6 +17,7 @@ foreignDBF <- read.dbf(sampleDBF, as.is = TRUE)
 
 # works pretty well... but what about related dbt file?
 
+# presentation note: linux xxd is a good command to show this structure
 # dbt contains memos. Binary file divided into blocks of 512 bytes. 
 # each contains text, then is padded with null
 # data starts at byte 512, so first block is ???
