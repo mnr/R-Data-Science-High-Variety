@@ -11,8 +11,8 @@
 # setwd("Exercise Files")
 
 # get a list of pathnames to files in Sample Files
-allSampleFiles <- list.files("Sample Files", full.names = TRUE)
-multipleSheetFile <- "Sample Files/multipleSheets.xlsx"
+allSampleFiles <- list.files("Sample Excel Files", full.names = TRUE)
+multipleSheetFile <- "Sample Excel Files/multipleSheets.xlsx"
 
 
 # Rio for simplicity ------------------------------------------------------
@@ -59,3 +59,9 @@ lapply(getSheetNames(multipleSheetFile), read.xlsx, xlsxFile = multipleSheetFile
 
 # oops...xls file...
 read.xlsx(list.files("Sample Files/", full.names = TRUE, pattern = "*.xls$"))
+
+# tidyxl reads data in tidy format
+install.packages("tidyxl")
+library(tidyxl)
+
+tidyxlimport <- xlsx_cells(multipleSheetFile)
