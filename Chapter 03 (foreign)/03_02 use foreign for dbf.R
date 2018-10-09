@@ -7,7 +7,6 @@
 
 # use foreign to import and export dbf
 
-install.packages("foreign")
 library(foreign)
 
 # read from DBF ----
