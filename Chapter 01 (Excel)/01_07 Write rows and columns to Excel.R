@@ -21,12 +21,18 @@ SmallTableForRange <- data.frame(thisThing = 1:5,
 # openxlsx ------------------------------------------
 
 # install.packages("openxlsx")
-# library(openxlsx)
+library(openxlsx)
 
-workingXLSX <- loadWorkbook( file = "Sample Files/multipleRanges.xlsx")
+workingXLSX <- createWorkbook( creator = "MNR",
+                               title = "Thermal Psychodynamics",
+                               subject = "Diffusion Lasers",
+                               category = "Science Fiction")
+
+addWorksheet(workingXLSX, "nuclear widgets")
 
 writeData(workingXLSX, x = SmallTableForRange,
-          sheet = "Simple",
-          startCol = 8, startRow = 3)
-saveWorkbook(workingXLSX, "writeToRange.xlsx")
+          sheet = "nuclear widgets",
+          startCol = 1, startRow = 3)
+
+saveWorkbook(workingXLSX, "writerowcol.xlsx", overwrite = TRUE)
 
