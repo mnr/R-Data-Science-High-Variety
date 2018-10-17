@@ -17,11 +17,16 @@
 # install.packages("openxlsx")
 # library(openxlsx)
 
-workingXLSX <- loadWorkbook( file = "Sample Files/multipleRanges.xlsx")
+workingXLSX <- createWorkbook( creator = "MNR",
+                               title = "Thermal Psychodynamics",
+                               subject = "Diffusion Lasers",
+                               category = "Science Fiction")
 
-writeData(workingXLSX, x = 2.34353637,
-          sheet = "Simple",
-          startCol = 8, startRow = 3)
+addWorksheet(workingXLSX, "nuclear widgets")
 
-saveWorkbook(workingXLSX, "writeToRange.xlsx")
+# create a formula
+writeFormula(workingXLSX, x = c("SUM(a1:a3)"),
+          sheet = "nuclear widgets",
+          startCol = 1, startRow = 4)
 
+saveWorkbook(workingXLSX, "writeformula.xlsx", overwrite = TRUE)
