@@ -21,6 +21,6 @@ read.ssd() # requires SAS. If no copy of SAS, use a utility to convert to csv
 
 # write to SAS ----
 write.foreign(Smalldf, 
-              datafile = "sasData.sas",
-              codefile = "sasCode",
+              datafile = "sasData.csv",
+              codefile = "sasCode.sas",
               package = "SAS")
