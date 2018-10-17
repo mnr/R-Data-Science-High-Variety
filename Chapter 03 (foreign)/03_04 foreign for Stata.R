@@ -22,7 +22,7 @@ dtaReadSample <- read.dta(stataSampleFile)
 
 # write to Stata 
 write.foreign(dtaReadSample, 
-              datafile = "stataData.dat",
-              codefile = "stataCode",
+              datafile = "stataData.dta",
+              codefile = "stataCode.do",
               package = "Stata")
 
