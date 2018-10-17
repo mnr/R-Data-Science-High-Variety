@@ -10,10 +10,17 @@
 install.packages("foreign")
 library(foreign)
 
+# Some data to write to an excel range
+Smalldf <- data.frame(thisThing = 1:5, 
+                                 thatThing = 7:11,
+                                 AnotThing = LETTERS[1:5])
+
+
 # read from SAS ----
 read.ssd() # requires SAS. If no copy of SAS, use a utility to convert to csv
+
 # write to SAS ----
-write.foreign(dtaReadSample, 
+write.foreign(Smalldf, 
               datafile = "sasData.sas",
               codefile = "sasCode",
               package = "SAS")
