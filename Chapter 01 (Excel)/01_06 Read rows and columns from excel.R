@@ -24,7 +24,11 @@ library(readxl)
 # you might think this would work. 
 read_excel(spreadSheetRangeFile, range = "D:D")
 # But...Error: Can't guess format of this cell reference:
-# no way to tell read_excel to read an entire column
+
+# with cellranger, read_excel can read columns and rows.
+read_excel(spreadSheetRangeFile, range = cell_cols(c("D", NA)))
+read_excel(spreadSheetRangeFile, range = cell_rows(3))
+
 
 # however, you can read a range
 read_excel(spreadSheetRangeFile, range = "D1:D30")
