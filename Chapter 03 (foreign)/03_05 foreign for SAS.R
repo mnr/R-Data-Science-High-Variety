@@ -18,6 +18,7 @@ Smalldf <- data.frame(thisThing = 1:5,
 
 # read from SAS ----
 read.ssd() # requires SAS. If no copy of SAS, use a utility to convert to csv
+# additionally, look at the haven package for read_sas( ).
 
 # write to SAS ----
 write.foreign(Smalldf, 
